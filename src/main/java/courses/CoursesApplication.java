@@ -1,12 +1,12 @@
-package com.coursesjava;
+package courses;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoursesJavaApplication {
+public class CoursesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CoursesJavaApplication.class, args);
+		SpringApplication.run(CoursesApplication.class, args);
 	}
 }

@@ -1,4 +1,4 @@
-package com.coursesjava;
+package courses;
 
 import javax.annotation.Resource;
 
@@ -20,18 +20,18 @@ public class CourseController {
 	}
 	
 	@RequestMapping("/course")
-	public String getOneCourse(@RequestParam(value = "id") String id, Model model) {
+	public String getOneCourse(@RequestParam(value ="id") String id, Model model) {
 		model.addAttribute("course", repository.findOne(id));
 		return "course";
 		
 	}
 	
 	@RequestMapping("/addCourse")
-	public String createTag(@RequestParam(value="id") String id, String name, String description, String instructor) {
+	public String createTag(@RequestParam(value="id")String id, String name, String description, String instructor) {
 		CourseTopic course = new CourseTopic(id, name, description, instructor);
 		repository.add(course);
 
-		return "redirect:/courses";
+		return "redirect:/courses?id=" + id;
 		
 	}
 	

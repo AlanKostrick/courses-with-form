@@ -1,4 +1,4 @@
-package com.coursesjava;
+package courses;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,9 +13,9 @@ public class CourseRepository {
 	
 	public CourseRepository() {
 		
-		CourseTopic course1 = new CourseTopic("spring","Spring Framework", "Spring Framework Description", "Brian");
-		CourseTopic course2 = new CourseTopic("java","Core Java", "Core Java Description", "Alan");
-		CourseTopic course3 = new CourseTopic("javascript","Javascript", "Javascript Description", "Donny");
+		CourseTopic course1 = new CourseTopic("1","Spring Framework", "Spring Framework Description", "Brian");
+		CourseTopic course2 = new CourseTopic("2","Core Java", "Core Java Description", "Alan");
+		CourseTopic course3 = new CourseTopic("3","Javascript", "Javascript Description", "Donny");
 		
 		courses.put(course1.getId(), course1);
 		courses.put(course2.getId(), course2);
