@@ -20,18 +20,18 @@ public class CourseController {
 	}
 	
 	@RequestMapping("/course")
-	public String getOneCourse(@RequestParam(value ="id") String id, Model model) {
+	public String getOneCourse(@RequestParam(value ="id") Long id, Model model) {
 		model.addAttribute("course", repository.findOne(id));
 		return "course";
 		
 	}
 	
 	@RequestMapping("/addCourse")
-	public String createTag(@RequestParam(value="id")String id, String name, String description, String instructor) {
-		CourseTopic course = new CourseTopic(id, name, description, instructor);
+	public String createTag(String name, String description, String instructor) {  
+		CourseTopic course = new CourseTopic(name, description, instructor);
 		repository.add(course);
 
-		return "redirect:/courses?id=" + id;
+		return "redirect:/courses";
 		
 	}
 	

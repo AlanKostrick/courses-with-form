@@ -2,19 +2,26 @@ package courses;
 
 public class CourseTopic {
 
-	private String id;
+	private Long id;
 	private String name;
 	private String description;
 	private String instructor;
 
-	public CourseTopic(String id, String name, String description, String instructor) {
+	public CourseTopic(Long id, String name, String description, String instructor) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
 		this.instructor = instructor;
 	}
+	
+	public CourseTopic(String name, String description, String instructor) {
+		this.name = name;
+		this.description = description;
+		this.instructor = instructor;
+		id = (long)(Math.random()*1000);
+	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 

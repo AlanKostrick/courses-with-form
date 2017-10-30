@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class CourseRepository {
 	
-	protected Map<String, CourseTopic> courses = new HashMap<String, CourseTopic>();
+	protected Map<Long, CourseTopic> courses = new HashMap<Long, CourseTopic>();
 	
 	public CourseRepository() {
 		
-		CourseTopic course1 = new CourseTopic("1","Spring Framework", "Spring Framework Description", "Brian");
-		CourseTopic course2 = new CourseTopic("2","Core Java", "Core Java Description", "Alan");
-		CourseTopic course3 = new CourseTopic("3","Javascript", "Javascript Description", "Donny");
+		CourseTopic course1 = new CourseTopic(1L,"Spring Framework", "Spring Framework Description", "Brian");
+		CourseTopic course2 = new CourseTopic(2L,"Core Java", "Core Java Description", "Alan");
+		CourseTopic course3 = new CourseTopic(3L,"Javascript", "Javascript Description", "Donny");
 		
 		courses.put(course1.getId(), course1);
 		courses.put(course2.getId(), course2);
@@ -27,7 +27,7 @@ public class CourseRepository {
 		return courses.values();
 	}
 	
-	public CourseTopic findOne(String id) {
+	public CourseTopic findOne(Long id) {
 		return courses.get(id);
 	}
 	
