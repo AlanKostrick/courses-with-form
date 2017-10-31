@@ -7,25 +7,15 @@
 </head>
 
 <body>
-
-	<header>
 		<h1> This is a Course </h1>
-	</header>
 
-	<div> 
-		<h2 th:text="${course.name}"></h2>
-		<h2 th:text="${course.description}"></h2>
-		<h2 th:text="'Instructor: ' + ${course.instructor}"></h2>
+	<ul> 
+		<li th:text="${course.name}"></li>
+		<li th:text="${course.description}"></li>
+		<li th:text="'Instructor: ' + ${course.instructor}"></li>
 		<a href="http://localhost:8080/courses">Back to home</a>
-	</div>
+	</ul>
 	
-	
-	<form>
-
-		<input name="delete" type="hidden" th:value="${course.id}" />
-			<input type="text" name="id" />
-			<button name="courseId" th:value="${course.id}" th:formaction="@{course/removeCourse}">delete</button>
-	</form>
 
 
 </body>

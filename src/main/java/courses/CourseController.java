@@ -35,8 +35,8 @@ public class CourseController {
 		
 	}
 	
-	@RequestMapping("/course/removeCourse")
-	public String removeCourse(@RequestParam Long id) {  
+	@RequestMapping("/removeCourse")
+	public String removeCourse(Long id) {  
 		CourseTopic removeCourse = repository.findOne(id);
 		repository.remove(removeCourse);
 

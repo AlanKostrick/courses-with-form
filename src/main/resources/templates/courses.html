@@ -7,31 +7,26 @@
 </head>
 
 <body>
-	<header>
 		<h1>A List of Courses</h1>
-	</header>
 
 	<div th:each="course: ${courses}">
-		<h2>
 			<a th:href="@{/course(id=${course.id})}" th:text="${course.name}"></a>
-		</h2>
-	
 	</div>
 	
 	<form method="POST">
-	
-	<input name="id" type="hidden"  />
-	
-		<label>Add new course name, description and instructor: 
+		<label>Enter name, description and instructor: </label>
 		<input type="text" name="name" />
 		<input type="text" name="description" />
-		<input type="text" name="instructor" /></label>
-		<br/>
+		<input type="text" name="instructor" />
 		<button th:formaction="@{/addCourse}">Add Course</button>	
 		</form>
 		
 		
-
+	<form>
+		<label>Enter id of course to remove:</label>
+		<input type="text" name="id" />
+		<button th:formaction="@{removeCourse}">delete</button>
+	</form>
 		
 	
 
