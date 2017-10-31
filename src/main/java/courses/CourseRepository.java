@@ -35,6 +35,10 @@ public class CourseRepository {
 		courses.put(course.getId(), course);
 	}
 	
+	public void remove(CourseTopic course) {
+		courses.remove(course.getId(), course);
+	}
+	
 	
 
 }

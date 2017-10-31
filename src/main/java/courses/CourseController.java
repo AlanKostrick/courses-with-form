@@ -27,7 +27,7 @@ public class CourseController {
 	}
 	
 	@RequestMapping("/addCourse")
-	public String createTag(String name, String description, String instructor) {  
+	public String createCourse(String name, String description, String instructor) {  
 		CourseTopic course = new CourseTopic(name, description, instructor);
 		repository.add(course);
 
@@ -35,6 +35,14 @@ public class CourseController {
 		
 	}
 	
+	@RequestMapping("/course/removeCourse")
+	public String removeCourse(@RequestParam Long id) {  
+		CourseTopic removeCourse = repository.findOne(id);
+		repository.remove(removeCourse);
+
+		return "redirect:/courses";
+		
+	}
 	
 	
 	

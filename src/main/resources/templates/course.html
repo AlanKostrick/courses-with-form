@@ -20,6 +20,12 @@
 	</div>
 	
 	
+	<form>
+
+		<input name="delete" type="hidden" th:value="${course.id}" />
+			<input type="text" name="id" />
+			<button name="courseId" th:value="${course.id}" th:formaction="@{course/removeCourse}">delete</button>
+	</form>
 
 
 </body>
