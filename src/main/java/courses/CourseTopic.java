@@ -13,12 +13,12 @@ public class CourseTopic {
 		this.description = description;
 		this.instructor = instructor;
 	}
-	
+
 	public CourseTopic(String name, String description, String instructor) {
 		this.name = name;
 		this.description = description;
 		this.instructor = instructor;
-		id = (long)(Math.random()*1000);
+		id = (long) (Math.random() * 1000);
 	}
 
 	public Long getId() {
